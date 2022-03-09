@@ -1,0 +1,37 @@
+// program to accept age and name. if the age is even, the names will be printed 10 times 
+//but if the age is odd, the names will be printed 5 times
+
+//Written by ChanPhearun Cheam Section1 
+
+#include <iostream>  // This is the directive for input output
+using namespace std;   // use standard namespace
+
+int main()      // main function
+{
+    int age;   //declare age 
+    string name;    // declare name
+
+    cout<< " Enter age: ";      //input age 
+    cin>> age;              // accept name
+    cin.ignore();
+
+    cout<< " Enter name: ";     // display Enter name
+    getline(cin, name);         // accepts input for name
+
+ // if the age is even, the names will be printed 10 times
+    if( age % 2 ==0){           
+        for(int N = 0 ; N< 10; N++){
+        cout<< name << endl;
+        }
+    }
+
+    // if the age is odd, the names will be printed 5 times
+    else;   
+
+        for ( int N = 0 ; N<5; N++){
+        cout << name<< endl; 
+            }
+    
+    
+    return 0;    // return 0 to the OS
+}    //Close the main function block
