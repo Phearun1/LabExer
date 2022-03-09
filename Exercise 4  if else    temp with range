@@ -1,41 +1,48 @@
-#include <iostream>
-using namespace std;
+// Program to to accept the current temperature and display the following messages based on the range
 
-int main()
+//Written by ChanPhearun Cheam section1
+
+#include <iostream>         // This is the directive for input output
+using namespace std;        // use standard namespace
+
+int main()  // Main function
 { 
-    char letter_temp;
-    int temp;
-    cout << " Enter Temperature: ";
-    cin>> temp;
+    
+    int temp;  // Declare Temp as Temperaeture
+    cout << "Enter Temperature: ";    // Input Temperature
+    cin>> temp;         // Accept Temp
+    if ( cin.fail()){        // if it is not a integer
+        cout<< "Invalid input";     // display Invalid input
+    }
 
-    if ( temp >=41 and temp <= 54)
+    else if ( temp >=41 and temp <= 54)   // if temperature is between 41 and 54
     {
-        cout << "Stay hydrated!";
+        cout << "Stay hydrated!";       // display Stay hydrated
 
     }
-    else if ( temp >= 32 and temp <= 40 )
+    else if ( temp >= 32 and temp <= 40 )       // if temperature is between 32 and 40
     {
-        cout <<  "Stay Cool and safe!";
+        cout <<  "Stay Cool and safe!";     //display Stay Cool and safe!
     }
-    else if ( temp >= 26 and temp <= 31)
+    else if ( temp >= 26 and temp <= 31)   // if the temperature is between 26 and 31
         {
-            cout <<  "Keep a sunblock handy!";
+            cout <<  "Keep a sunblock handy!";      // display Keep a sunblock handy!
 
         }
-    else if ( temp >= 20 and temp <= 25 )
+    else if ( temp >= 20 and temp <= 25 )       // if the temperature is between 20 and 25
     {
-        cout <<  "Alway keep your cool!";
+        cout <<  "Alway keep your cool!";       // display Alway keep your cool!
     
     }
-    else if ( temp < 20 )
+    else if ( temp < 20 )           // if the temperature is below 20
     {
-        cout <<  "Cool breeze in the air!";
+        cout <<  "Cool breeze in the air!";     // display Cool breeze in the air!
     
     }
-    else 
+    else                // if the temperature is not in range
     {
-    cout<< " Wrong input number";
+    cout<< " Value entered is out of range! ";      // display Value entered is out range
     }
-    return 0;
-   
-}
+    return 0;   // return 0 to the OS
+
+}       //Close the main function block
