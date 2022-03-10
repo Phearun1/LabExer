@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+#ifndef __TRUE_FALSE__
+#define __TRUE_FALSE__
+#define TRUE 1
+#define FALSE 0
+#endif
+
+ int main () {
+
+	int number = 0;
+	int x = 0;
+	int z = 0;
+	bool NotPrime = FALSE;
+
+	cout << "Enter an Integer" << endl;
+	cin >> number;
+//Im a bit confused right here, this is where im having trouble
+	for (int x=2; x<number; ++x)
+		{
+			if (number % x == 0)
+			{
+				bool NotPrime=FALSE;
+				cout << " This is a Composite" << endl;
+			}
+		
+			else
+				 cout << " This is a Prime" << endl;
+		}
+//This while find the prime factors of the composite, but i cant get it too work with //the other code
+			while(NotPrime=FALSE){
+				for(int x=2; x <= number; x++) {
+				if(number % x ==0){
+					cout << x << endl; 
+						number = number/x;
+				}
+				else
+				x++;
+				}
+			}	
+return 0;
+
+		}
+    
+    
+    
+    https://www.daniweb.com/programming/software-development/threads/411161/c-prime-composite-number-prime-factorization
+    
+    return 0;    // return 0 to the OS
+}    //Close the main function block
